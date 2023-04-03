@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Money-Converter</title>
+</head>
+<body>
+ 
+<section id="inputs">
+    <input type="number" name="" id="num1" placeholder="R$" oninput="Calcular()"> 
+    <input type="number" name="" id="num2" placeholder="Real">
+</section>  
+
+
+<footer>
+    <p>Selecione a moeda</p>
+    <select name="MoedasList" id="MoedasList" oninput="Calcular()">
+        <option value="USD">Dólar Americano</option>
+        <option value="CAD">Dólar Canadense</option>
+        <option value="EUR">Euro</option>
+        <option value="GBP">Libra Esterlina</option>
+        <option value="ARS">Peso Argentino</option>
+        <option value="JPY">Iene Japonês</option>
+        <option value="CHF">Franco Suíço</option>
+        <option value="AUD">Dólar Australiano</option>
+        <option value="CNY">Yuan Chinês</option>
+        <option value="ILS">Novo Shekel Israelense</option>
+        <option value="BTC">Bitcoin</option>
+        <option value="LTC">Litecoin</option>
+        <option value="ETH">Ethereum</option>
+        <option value="XRP">XRP</option>
+    </select>
+<br>
+<br>
+<a href="">Direito Altorais</a>
+
+</footer>
+
+</body>
+<script src="Money.js"></script>
+</html>
