@@ -9,19 +9,19 @@ function Calcular()
  fetch(url).then(Response => Response.json().then(date => {
     let Resultado = date[Valor]
     Result.value = num1.value * Resultado.ask 
-
  }))
 }
 function TemaSelect()
 {
    TemaConfig()
+   
 }
-
+ 
 function TemaConfig()
 {
    const Body = document.querySelector('body').style
    const footer = document.querySelector('footer').style
    let tema = document.getElementById('tema')
    Body.backgroundColor = "#191920"
-   footer.backgroundColor = '#151520'
+   footer.backgroundColor = '#151520' 
 }
