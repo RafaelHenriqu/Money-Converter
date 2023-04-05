@@ -4,6 +4,7 @@
     border: 0px;
     font-family: monospace;
     font-size: 16px;
+
     }
      a{
         color: white;
@@ -86,5 +87,8 @@ color: white;
             min-width: 5%;
             max-width: 100%;
             
+        }
+        select{
+            width: 50%;
         }
     }

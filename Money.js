@@ -12,3 +12,16 @@ function Calcular()
 
  }))
 }
+function TemaSelect()
+{
+   TemaConfig()
+}
+
+function TemaConfig()
+{
+   const Body = document.querySelector('body').style
+   const footer = document.querySelector('footer').style
+   let tema = document.getElementById('tema')
+   Body.backgroundColor = "#191920"
+   footer.backgroundColor = '#151520'
+}
