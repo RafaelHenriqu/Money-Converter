@@ -1,5 +1,23 @@
 const num1 = document.getElementById('num1')
 const Result = document.getElementById('num2')
+
+
+
+if (localStorage.Tema){
+   if (localStorage.Tema == "Light"){
+      document.querySelector('body').style.backgroundColor = "#FFFFFF"
+      document.querySelector('footer').style.backgroundColor = '#1F1F27' 
+   }else{
+      document.querySelector('body').style.backgroundColor = "#191920"
+      document.querySelector('footer').style.backgroundColor = '#151520' 
+   }
+}else{
+   var Tema = localStorage.Tema = "Light"
+}
+ 
+
+
+
 function Calcular()
 {
     let Moeda = document.getElementById('MoedasList').value
@@ -13,15 +31,31 @@ function Calcular()
 }
 function TemaSelect()
 {
-   TemaConfig()
+   const Body = document.querySelector('body').style
+   const footer = document.querySelector('footer').style
+
+   if (localStorage.Tema == "Light"){
+      localStorage.Tema = "Dark"
+      TemaConfig(Body,footer,localStorage.Tema)
+   }else{
+      localStorage.Tema = "Light"
+      TemaConfig(Body,footer,localStorage.Tema)
+   }
+   
+   
    
 }
  
-function TemaConfig()
+function TemaConfig(Body,footer,Tema)
 {
-   const Body = document.querySelector('body').style
-   const footer = document.querySelector('footer').style
-   let tema = document.getElementById('tema')
-   Body.backgroundColor = "#191920"
-   footer.backgroundColor = '#151520' 
-}
+
+   if (Tema == "Light"){
+      Body.backgroundColor = "#FFFFFF"
+      footer.backgroundColor = '#1F1F27' 
+   }else{
+      Body.backgroundColor = "#191920"
+      footer.backgroundColor = '#151520' 
+   }
+
+   
+   }
