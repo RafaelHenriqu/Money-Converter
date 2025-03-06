@@ -1,7 +1,7 @@
-# Money-Converter
+# Money Converter
  ## Objetivo
 
- Simplificar a Conversão de outras Moedas para o real.
+ Simplificar a Conversão de outras Moedas para o Real brasileiro.
 
 ## Moedas
 Atualmente Convertemos as seguintes Moedas
