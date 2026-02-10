@@ -1,22 +1,28 @@
-const num1 = document.getElementById('num1')
-const Result = document.getElementById('num2')
+const num1 = document.getElementById('n1')
+const Result = document.getElementById('n2')
 
-
-
-if (localStorage.Tema){
-   if (localStorage.Tema == "Light"){
-      document.querySelector('body').style.backgroundColor = "#FFFFFF"
-      document.querySelector('footer').style.backgroundColor = '#1F1F27' 
-   }else{
-      document.querySelector('body').style.backgroundColor = "#191920"
-      document.querySelector('footer').style.backgroundColor = '#151520' 
+const Themes = {
+   Light:{
+      body:"#FFFFFF",
+      footer:"#1F1F27",
+   },
+   Dark:{
+      body:"#191920",
+      footer:"#151520",
    }
-}else{
-   var Tema = localStorage.Tema = "Light"
+
 }
- 
 
+function Theme_Select(){
+   document.querySelector('body').style.backgroundColor = Themes[localStorage.getItem("Tema")].body
+   document.querySelector('footer').style.backgroundColor = Themes[localStorage.getItem("Tema")].footer
+}
 
+if (localStorage.getItem("Tema")){
+   Theme_Select()
+}else{
+   localStorage.setItem("Tema","Dark")
+}
 
 function Calcular()
 {
@@ -29,33 +35,13 @@ function Calcular()
     Result.value = num1.value * Resultado.ask 
  }))
 }
-function TemaSelect()
-{
-   const Body = document.querySelector('body').style
-   const footer = document.querySelector('footer').style
-
-   if (localStorage.Tema == "Light"){
-      localStorage.Tema = "Dark"
-      TemaConfig(Body,footer,localStorage.Tema)
-   }else{
-      localStorage.Tema = "Light"
-      TemaConfig(Body,footer,localStorage.Tema)
-   }
-   
-   
-   
-}
  
-function TemaConfig(Body,footer,Tema)
-{
-
-   if (Tema == "Light"){
-      Body.backgroundColor = "#FFFFFF"
-      footer.backgroundColor = '#1F1F27' 
+ 
+document.getElementById("tema").addEventListener("click",()=>{
+   if (localStorage.getItem("Tema") == "Light"){
+      localStorage.setItem("Tema","Dark")
    }else{
-      Body.backgroundColor = "#191920"
-      footer.backgroundColor = '#151520' 
+      localStorage.setItem("Tema","Light")
    }
-
-   
-   }
+   Theme_Select()
+})
